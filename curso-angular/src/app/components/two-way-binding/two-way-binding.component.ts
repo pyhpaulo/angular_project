@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Animal } from 'src/app/Animal';
+import { ListService } from 'src/app/services/list.service';
 
 @Component({
   selector: 'app-two-way-binding',
@@ -7,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayBindingComponent implements OnInit {
   name: string = ""
+  tipo: string = ''
+  idade: number = 0;
+
+  
   constructor () {}
 
   ngOnInit(): void {

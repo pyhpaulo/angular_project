@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
 import { ListService } from 'src/app/services/list.service';
 
+
 @Component({
   selector: 'app-list-render',
   templateUrl: './list-render.component.html',
@@ -23,11 +24,14 @@ export class ListRenderComponent implements OnInit {
   }
 
   removeAnimal(animal:Animal){
-    console.log('Removendo animal...')
-    this.animals = this.listService.remove(this.animals, animal);
+    this.animals = this.animals.filter((a) => animal.name !== a.name);
+    this.listService.remove(animal.id).subscribe();
   }
 
   getAnimals(): void{
     this.listService.getAll().subscribe((animals) => (this.animals = animals))
   }
+
+    
+  
 }
