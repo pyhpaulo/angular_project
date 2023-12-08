@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class EventosComponent {
   show: boolean = false
   showMessage(): void{
-    this.show = !this.show
+    this.show = !this.show //toggle
   }
 
 }

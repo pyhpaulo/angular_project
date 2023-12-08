@@ -1,9 +1,22 @@
 <h1> Hello World Angular! </h1>
-<P> Alguma bagaça</P>
+<nav>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/if-render">If Render</a></li>
+        <li><a routerLink="/eventos">Eventos</a></li>
+        <li><a routerLink="/directives">Diretivas</a></li>
+        <li><a routerLink="/emitter">Emitter</a></li>
+        <li><a routerLink="/list">Lista Animais</a></li>
+        <li><a routerLink="/pipes">Pipes</a></li>
+        <li><a routerLink="/two-way-binding">Two Way</a></li>
+    </ul>
 
+</nav>
+    <section>
+        <h3>Bem vindo ao meu projeto Curso-Angular</h3>
 
-<app-first-component></app-first-component>
-<app-parent-data [name]="userName" [userData]="userData"></app-parent-data>
-<app-directives></app-directives>
-<app-if-render></app-if-render>
-<app-eventos></app-eventos>
+        <router-outlet></router-outlet>
+    </section>
+    <footer>
+        Paulo Henrique Domingos &copy;
+    </footer>
